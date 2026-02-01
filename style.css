@@ -16,6 +16,11 @@ a{
 }
 
 
+html {
+    scroll-behavior: smooth; /* magic line */
+  }
+
+
 body{
     font-family: "Merriweather";
     font-weight: 400;
@@ -118,6 +123,7 @@ header .nav-links li a:hover, header .nav-links li .active{
     
     animation: firstAnimate 1.3s ease-out;
     
+    
 }
 
 @keyframes firstAnimate {
@@ -165,6 +171,8 @@ header .nav-links li a:hover, header .nav-links li .active{
 .about-section .about-contents{
     width: 1000px;
     animation: secondAnimate 1.3s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
 }
 
 
