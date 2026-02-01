@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+body{
+    font-family: "Merriweather";
+    font-weight: 400;
+}
+
+.menu-btn{
+    display: none;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 20px 30px;
+    color: #026945;
+    background-color: white;
+    border: transparent;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .cta-btn:hover{
+    background-color: #026945;
+    color: white;
+    border: 1px solid white;
+  }
+
+/* Header section */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    padding: 40px 60px;
+    background-color: white;
+    box-shadow:0 4px 8px rgba(0,0,0,0.7);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+header .nav-links{
+    display: flex;
+}
+
+header .nav-links li{
+    list-style: none;
+    padding: 0 30px;
+}
+
+header .nav-links li a{
+    color: black;
+    font-size: 18px;
+    font-family: "Merriweather" sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header .nav-links li a:hover, header .nav-links li .active{
+    color: #026945;
+    transition: 0.3s linear;
+}
+.logo{
+    font-weight: 600;
+}
+.logo span{
+    color: #026945;
+}
+
+
+.hero-section{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    animation: bgChange 30s infinite;
+}
+
+@keyframes bgChange {
+   0% {background-image: url(./gallery\ 1.jpg);}
+   25% {background-image: url(./gallery\ 2.jpg);}
+   50% {background-image: url(./gallery\ 3.jpg);}
+   75% {background-image: url(./gallery\ 4.jpg);}
+   100% {background-image: url(./gallery\ 5.jpg);}
+}
+
+.hero-section .hero-contents{
+    width: 800px;
+    margin: auto 50px;
+    
+    animation: firstAnimate 1.3s ease-out;
+    
+}
+
+@keyframes firstAnimate {
+    0%{
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section .hero-contents h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.hero-section .hero-contents p{
+    font-size: 20px;
+    line-height: 1.5;
+    color: whitesmoke;
+    text-align: justify;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+
+
+/* *************************** ABOUT SECTION ******************************* */
+
+.about-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-color: #026945;
+    color: white;
+    text-align: center;
+}
+
+.about-section .about-contents{
+    width: 1000px;
+    animation: secondAnimate 1.3s ease-out;
+}
+
+
+@keyframes secondAnimate {
+    0%{
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.about-section .about-contents h1{
+    font-size: 40px;
+    margin-bottom: 50px;
+    font-weight: 500;
+    position: relative;
+}
+
+.about-section .about-contents h1::after{
+    content: "";
+    width: 5%;
+    height: 4px;
+    background: white;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.about-section .about-contents p{
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    padding: 0 50px;
+}
+
+
+
+/* *************************** SERVICES SECTION ******************************* */
+
+
+.service-section{
+    margin: 100px 0;
+    text-align: center;
+}
+
+.service-section h1{
+    margin-bottom: 60px;
+    position: relative;
+    font-weight: 500;
+}
+
+.service-section h1::after{
+    content: "";
+    width: 5%;
+    height: 4px;
+    background: #088178;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+    
+    
+
+}
+
+.service-section .service-container{
+    max-width: 1400px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+}
+
+.service-section .service-container .service-card{
+    border: 1px solid rgba(128, 128, 128, 0.322);
+    border-radius: 12px;
+
+}
+
+.service-section .service-container .service-card h3{
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 0 30px;
+    font-weight: 500;
+}
+
+.service-section .service-container .service-card p{
+    text-align: left;
+    color: gray;
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding: 0 30px;
+}
+
+
+
+.service-section .service-container img{
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* *************************** GALLERY SECTION ******************************* */
+   
+
+.gallery-section{
+    margin: 100px 0;
+    text-align: center;
+
+}
+
+.gallery-section h1{
+    margin-bottom: 60px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+.gallery-section h1::after{
+    content: "";
+    width: 5%;
+    height: 4px;
+    background: #088178;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.gallery-section .gallery-container{
+    max-width: 1400px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+}
+
+.gallery-section .gallery-container img{
+    width: 100%;
+}
+
+
+
+
+
+/* *************************** OUR TEAM SECTION ******************************* */
+
+
+.team-section{
+    margin: 100px 0;
+    text-align: center;
+    
+}
+
+.team-section h1{
+    margin-bottom: 60px;
+    font-weight: 500;
+    position: relative;
+}
+
+.team-section h1::after{
+    content: "";
+    width: 5%;
+    height: 4px;
+    background: #088178;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.team-section .team-container{
+    max-width: 1000px;
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    
+}
+
+
+
+.team-section .team-container .team-card{
+    text-align: center;
+}
+
+.team-section .team-container .team-card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #026945;
+    margin-bottom: 20px;
+}
+
+.team-section .team-container .team-card h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.team-section .team-container .team-card p{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.team-section .team-container .team-card .socials{
+    display: flex;
+    max-width: 1000px;
+    width: 50%;
+    margin: auto;
+    gap: 20px;
+}
+
+.team-section .team-container .team-card .socials i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #026945;
+    border-radius: 50%;
+
+}
+
+.team-section .team-container .team-card .socials i:hover{
+    background-color: #02bb7a;
+}
+
+
+
+
+
+
+
+footer{
+    background-color: #026945;
+  }
+  
+  footer .box-container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 40px;
+
+  }
+  
+  footer .box-container .box{
+    flex: 1 1 25rem;
+  }
+  
+  footer .box-container .box h3{
+    color: #fff;
+    margin-top: 10px;
+    font-size: 24px;
+    padding: 1rem 0;
+  }
+  
+  footer .box-container .box a{
+    display: block;
+    font-size: 20px;
+    color: rgba(245, 245, 245, 0.589);
+    padding: 1rem 0;
+    transition: 0.3s ease;
+  }
+  
+  footer .box-container .box a:hover{
+    color: white;
+    text-decoration: underline;
+  }
+  
+  footer .box-container .box img{
+    margin-top: 1rem;
+  }
+  
+  footer .credit{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    color: #b4b3b3e8;
+    padding-top: 2.5rem;
+    border-top: .1rem solid #b4b3b3e8;
+  }
+  
+  footer .credit span{
+    color: gray;
+  }
+  
+
