@@ -53,8 +53,8 @@ body{
 header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
+    justify-content: space-between;
     height: 80px;
     padding: 40px 60px;
     background-color: white;

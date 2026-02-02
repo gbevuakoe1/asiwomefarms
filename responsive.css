@@ -1,0 +1,134 @@
+/* 1024px for small laptops */
+@media (max-width: 1024px){
+    
+}
+
+
+/* 768px for tablets */
+@media (max-width: 768px){
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        z-index: 999;
+        box-shadow: none;
+        padding: 30px 40px;
+    }
+
+    header .nav-wrapper{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        background-color: white;
+        height: 100vh;
+        z-index: 999;
+        transform: translateX(100%);
+        transition: 0.6s ease-in-out;
+    }
+
+
+    .menu-open{
+        transform: translateX(0);
+    }
+
+    header .nav-links{
+        flex-direction: column;
+        text-align: center;
+        margin: 30px;
+    }
+
+    header .nav-links li a{
+        display: block;
+        padding: 30px;
+        color: black;
+        border-bottom: 0.5px solid rgba(128, 128, 128, 0.288);
+        text-align: center;
+    }
+   
+
+    .menu-btn{
+        display: block;
+        color: black;
+        font-size: 30px;
+    }
+
+    #close-btn{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    #open-btn{
+        color: white;
+        background-color: green;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .hero-section{
+        height: 90vh;
+    }
+
+    .hero-section .hero-contents{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-section .hero-contents h1{
+        font-size: 26px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .hero-section .hero-contents p{
+        font-size: 16px;
+        line-height: 1.5;
+        color: whitesmoke;
+        text-align: center;
+    }
+
+    .about-section .about-contents{
+        padding: 40px 60px;
+    }
+
+    .about-section .about-contents h1{
+        font-size: 28px;
+    }
+
+
+    .about-section .about-contents p{
+        font-size: 16px;
+    }
+
+
+    .service-section .service-container{
+        flex-direction: column;
+    }
+
+
+    .team-section .team-container{
+        flex-direction: column;
+    }
+}
+    /* 600px for mobile phones */
+@media (max-width: 600px){
+
+
+    .service-section .service-container{
+        flex-direction: column;
+    }
+
+
+    .team-section .team-container{
+        flex-direction: column;
+    }
+
+
+    
+    
+}
